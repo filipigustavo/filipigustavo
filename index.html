@@ -166,7 +166,8 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 0.75rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
     }
 
     .hero__masthead {
@@ -187,20 +188,7 @@
       font-style: italic;
       font-size: clamp(0.875rem, 2.5vw, 1.125rem);
       text-align: center;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero__caption {
-      position: absolute;
-      bottom: 1rem;
-      right: 1.25rem;
-      background: #fff;
-      border: 1px solid var(--rule);
-      padding: 0.35rem 0.6rem;
-      font-family: var(--font-meta);
-      font-size: 0.625rem;
-      line-height: 1.4;
-      z-index: 2;
+      margin-bottom: 0;
     }
 
     /* ── Navigation ── */
@@ -217,9 +205,18 @@
       margin: 0 auto;
       padding: 0 1.25rem;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
       gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    @media (min-width: 900px) {
+      .nav-bar__inner {
+        justify-content: center;
+      }
     }
 
     .nav-bar__inner a {
@@ -232,6 +229,7 @@
       min-height: 44px;
       display: flex;
       align-items: center;
+      flex-shrink: 0;
       border-right: 1px solid var(--rule);
       transition: background 0.2s;
     }
@@ -538,17 +536,13 @@
 
   <header class="hero" role="banner">
     <div class="hero__overlay" aria-hidden="true"></div>
-    <div class="hero__caption" aria-hidden="true">
-      Destaque de Impressão — Ampliado<br>
-      Pág. A3
-    </div>
     <div class="hero__content">
+      <h1 class="hero__masthead">Filipi Gustavo</h1>
+      <p class="hero__tagline">Technical Product Manager · Liderança Técnica Cross-Squads · Arquitetura de Soluções</p>
       <div class="hero__edition">
         <span>Edição Especial — Curitiba, PR</span>
         <time datetime="2026-08-29">29 de agosto de 2026</time>
       </div>
-      <h1 class="hero__masthead">Filipi Gustavo</h1>
-      <p class="hero__tagline">Technical Product Manager · Liderança Técnica Cross-Squads · Arquitetura de Soluções</p>
     </div>
   </header>
 
