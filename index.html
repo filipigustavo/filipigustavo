@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filipi Gustavo — Technical Product Manager | Curitiba</title>
+  <meta name="description" content="Filipi Gustavo — Technical Product Manager com 20 anos de experiência na intersecção entre Produto e Engenharia. Liderança técnica cross-squads, arquitetura de soluções e governança de plataformas globais. Curitiba, PR.">
+  <meta name="keywords" content="Filipi Gustavo, Technical Product Manager, TPM, Tech Lead, Arquitetura de Soluções, Curitiba, React, Micro-frontends, VTEX">
+  <meta name="author" content="Filipi Gustavo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://filipigustavo.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Filipi Gustavo — Technical Product Manager">
+  <meta property="og:description" content="20 anos traduzindo estratégia de negócios em arquiteturas executáveis. Liderança técnica cross-squads e governança de plataformas globais.">
+  <meta property="og:url" content="https://filipigustavo.github.io/">
+  <meta property="og:image" content="https://filipigustavo.github.io/assets/hero-halftone.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="profile:first_name" content="Filipi">
+  <meta property="profile:last_name" content="Gustavo">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Filipi Gustavo — Technical Product Manager">
+  <meta name="twitter:description" content="20 anos traduzindo estratégia de negócios em arquiteturas executáveis.">
+  <meta name="twitter:image" content="https://filipigustavo.github.io/assets/hero-halftone.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/hero-halftone.jpg" fetchpriority="high">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Filipi Gustavo Boltão Silva",
+    "givenName": "Filipi",
+    "familyName": "Gustavo",
+    "jobTitle": "Technical Product Manager",
+    "url": "https://filipigustavo.github.io/",
+    "image": "https://filipigustavo.github.io/assets/hero-halftone.jpg",
+    "email": "email@filipigustavo.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Curitiba",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://linkedin.com/in/filipigustavo"],
+    "knowsAbout": [
+      "Technical Product Management",
+      "Micro-frontends",
+      "React",
+      "Vue.js",
+      "Angular",
+      "Node.js",
+      "Arquitetura de Soluções",
+      "VTEX E-commerce",
+      "Liderança Cross-Squads",
+      "Governança Técnica"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Unicesumar"
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper: #f2efde;
+      --paper-dark: #e3dbc7;
+      --ink: #1a1a1a;
+      --ink-pure: #000;
+      --rule: #000;
+      --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --font-meta: system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 100%;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Paper grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a {
+      color: var(--ink);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--ink-pure); }
+
+    /* ── Hero / Masthead ── */
+    .hero {
+      position: relative;
+      min-height: clamp(280px, 45vw, 520px);
+      background: var(--paper) url('assets/hero-halftone.jpg') center 30% / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-bottom: 3px double var(--rule);
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(242, 239, 222, 0.15) 0%,
+        rgba(242, 239, 222, 0.55) 50%,
+        rgba(242, 239, 222, 0.95) 85%,
+        var(--paper) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      padding: 1.5rem 1.25rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero__edition {
+      font-family: var(--font-meta);
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.35rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero__masthead {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+      border-bottom: 4px solid var(--rule);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero__tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero__caption {
+      position: absolute;
+      bottom: 1rem;
+      right: 1.25rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      padding: 0.35rem 0.6rem;
+      font-family: var(--font-meta);
+      font-size: 0.625rem;
+      line-height: 1.4;
+      z-index: 2;
+    }
+
+    /* ── Navigation ── */
+    .nav-bar {
+      border-bottom: 2px solid var(--rule);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-bar__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .nav-bar__inner a {
+      font-family: var(--font-meta);
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid var(--rule);
+      transition: background 0.2s;
+    }
+
+    .nav-bar__inner a:first-child { border-left: 1px solid var(--rule); }
+    .nav-bar__inner a:hover { background: var(--paper-dark); }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .lead-section {
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .lead-section__contact {
+      font-family: var(--font-meta);
+      font-size: 0.8125rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.03em;
+    }
+
+    .lead-section__contact a { font-weight: 600; }
+
+    .lead-section__headline {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      line-height: 1.15;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 1.25rem;
+    }
+
+    .lead-section__text {
+      columns: 1;
+      column-gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .lead-section__text::first-letter {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 4.5rem;
+      line-height: 0.8;
+      font-weight: 900;
+      padding-right: 0.1em;
+      padding-top: 0.05em;
+      color: var(--ink-pure);
+    }
+
+    /* ── Main grid ── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 2rem 0;
+    }
+
+    @media (min-width: 640px) {
+      .lead-section__text { columns: 2; }
+    }
+
+    @media (min-width: 1024px) {
+      .main-grid {
+        grid-template-columns: 1fr 320px;
+        gap: 2rem;
+      }
+    }
+
+    /* ── Articles ── */
+    .articles { display: flex; flex-direction: column; gap: 0; }
+
+    .article {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .article:first-child { padding-top: 0; }
+
+    .article__label {
+      font-family: var(--font-meta);
+      font-size: 0.625rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--paper);
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .article__label--highlight {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--rule);
+    }
+
+    .article__headline {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.375rem, 3vw, 1.875rem);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .article__byline {
+      font-family: var(--font-meta);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--paper-dark);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .article__body {
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .article__body p { margin-bottom: 0.85rem; }
+    .article__body p:last-child { margin-bottom: 0; }
+
+    .article__body ul {
+      list-style: none;
+      margin: 0.5rem 0;
+      padding: 0;
+    }
+
+    .article__body li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .article__body li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      font-size: 0.75rem;
+      top: 0.15em;
+    }
+
+    .article__quote {
+      border-left: 3px solid var(--ink);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+      background: var(--paper-dark);
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      border-top: 2px solid var(--rule);
+      padding-top: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .sidebar {
+        border-top: none;
+        border-left: 1px solid var(--rule);
+        padding-top: 0;
+        padding-left: 2rem;
+        position: sticky;
+        top: 48px;
+        align-self: start;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+      }
+    }
+
+    .sidebar__block {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--paper-dark);
+    }
+
+    .sidebar__block:last-child { border-bottom: none; }
+
+    .sidebar__title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar__category {
+      font-family: var(--font-meta);
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+      margin-top: 0.85rem;
+      color: #555;
+    }
+
+    .sidebar__category:first-of-type { margin-top: 0; }
+
+    .sidebar__list {
+      list-style: none;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+
+    .sidebar__list li {
+      padding: 0.2rem 0;
+      padding-left: 0.85rem;
+      position: relative;
+    }
+
+    .sidebar__list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      font-size: 0.75rem;
+    }
+
+    .sidebar__linkedin {
+      display: block;
+      font-family: var(--font-meta);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid var(--rule);
+      padding: 0.85rem 1rem;
+      text-align: center;
+      min-height: 44px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .sidebar__linkedin:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 3px double var(--rule);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-family: var(--font-meta);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    .footer a {
+      font-weight: 600;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .footer__rule {
+      width: 60px;
+      height: 1px;
+      background: var(--rule);
+      margin: 0.75rem auto;
+    }
+
+    /* ── Skip link (a11y) ── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.5rem 1rem;
+      z-index: 10000;
+      font-family: var(--font-meta);
+      font-size: 0.875rem;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    /* ── Print ── */
+    @media print {
+      .nav-bar, .skip-link { display: none; }
+      .hero { min-height: auto; break-after: avoid; }
+      .sidebar { position: static; border-left: none; padding-left: 0; }
+      body::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#conteudo" class="skip-link">Ir para o conteúdo</a>
+
+  <header class="hero" role="banner">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__caption" aria-hidden="true">
+      Destaque de Impressão — Ampliado<br>
+      Pág. A3
+    </div>
+    <div class="hero__content">
+      <div class="hero__edition">
+        <span>Edição Especial — Curitiba, PR</span>
+        <time datetime="2026-08-29">29 de agosto de 2026</time>
+      </div>
+      <h1 class="hero__masthead">Filipi Gustavo</h1>
+      <p class="hero__tagline">Technical Product Manager · Liderança Técnica Cross-Squads · Arquitetura de Soluções</p>
+    </div>
+  </header>
+
+  <nav class="nav-bar" aria-label="Navegação principal">
+    <div class="nav-bar__inner">
+      <a href="#manchete">Manchete</a>
+      <a href="#agrotis">Agrotis</a>
+      <a href="#boticario-tpm">Boticário</a>
+      <a href="#boticario-fe">Micro-frontends</a>
+      <a href="#medprev">Medprev</a>
+      <a href="#acct">ACCT Global</a>
+      <a href="#hilab">Hilab</a>
+      <a href="#competencias">Competências</a>
+    </div>
+  </nav>
+
+  <main id="conteudo">
+
+    <!-- Lead / Manchete -->
+    <section class="lead-section" id="manchete" aria-labelledby="lead-headline">
+      <div class="container">
+        <p class="lead-section__contact">
+          Curitiba, PR &nbsp;·&nbsp;
+          <a href="mailto:email@filipigustavo.com.br">email@filipigustavo.com.br</a>
+          &nbsp;·&nbsp;
+          <a href="https://linkedin.com/in/filipigustavo" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        </p>
+        <h2 class="lead-section__headline" id="lead-headline">Duas décadas traduzindo estratégia em arquitetura executável</h2>
+        <div class="lead-section__text">
+          <p>Profissional de tecnologia com 20 anos de trajetória, especializado na intersecção estratégica entre Produto e Engenharia (TPM). Expertise em traduzir requisitos de negócios e roadmaps em arquiteturas executáveis e soluções escaláveis de alta performance. Vasta experiência na governança de arquiteturas complexas, gestão de débitos técnicos e mitigação de riscos em plataformas globais. Histórico comprovado de liderança técnica cross-squads, condução de refinamentos ágeis e viabilização de novos produtos por meio de Provas de Conceito (PoCs) para acelerar entregas de valor.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="main-grid">
+
+        <!-- Articles column -->
+        <div class="articles">
+
+          <!-- Agrotis -->
+          <article class="article" id="agrotis">
+            <span class="article__label">Edição Atual</span>
+            <h2 class="article__headline">Parceiro estratégico de Produto lidera evolução do receituário agronômico</h2>
+            <p class="article__byline">Agrotis · Tech Lead (Gestão Técnica de Produto) · Março de 2026 — Presente</p>
+            <div class="article__body">
+              <p>Na fronteira entre agrotech e engenharia de produto, uma nova liderança assume o desafio de transformar roadmaps ambiciosos em realidade técnica — e os números já começam a contar essa história.</p>
+              <ul>
+                <li>Atuação direta como parceiro estratégico (interface consultiva) do time de Produto, avaliando a viabilidade técnica de demandas e convertendo roadmaps de negócio em arquiteturas executáveis.</li>
+                <li>Liderança técnica focada na evolução, estabilidade e escalabilidade do produto core de receituário agronômico.</li>
+                <li>Condução de refinamentos técnicos junto ao time de desenvolvimento, incluindo a elaboração de Provas de Conceito (PoCs) para acelerar a inovação e o lançamento de novas ferramentas.</li>
+                <li>Desbloqueio de impedimentos complexos de engenharia e mentoria de desenvolvedores para garantir a fluidez do delivery.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Grupo Boticário TPM -->
+          <article class="article" id="boticario-tpm">
+            <span class="article__label">Capa</span>
+            <h2 class="article__headline">Governança técnica unifica cinco squads na logística global</h2>
+            <p class="article__byline">Grupo Boticário · Tech Lead Front-End / TPM · Julho de 2024 — Fevereiro de 2026</p>
+            <div class="article__body">
+              <p>Em uma das maiores operações de varejo do país, a coordenação entre cinco equipes distintas exigia mais do que código — exigia visão. A resposta veio na forma de uma governança técnica que conectou engenharia e negócio em escala global.</p>
+              <ul>
+                <li>Gestão de impacto arquitetural e governança técnica cross-squad, unificando a visão de produto em 5 equipes distintas da plataforma logística global.</li>
+                <li>Mapeamento proativo de débitos técnicos e articulação de prioridades do backlog junto às squads, conectando as necessidades da engenharia aos objetivos do negócio.</li>
+                <li>Liderança de ritos de refinamento, blindando a plataforma contra quebras estruturais durante o ciclo de desenvolvimento.</li>
+                <li>Gestão e mentoria de um time distribuído de 8 engenheiros, elevando o padrão técnico das entregas.</li>
+              </ul>
+              <blockquote class="article__quote">Oito engenheiros, cinco squads, uma plataforma logística global — e zero tolerância a quebras estruturais.</blockquote>
+            </div>
+          </article>
+
+          <!-- Grupo Boticário FE -->
+          <article class="article" id="boticario-fe">
+            <span class="article__label">Reportagem</span>
+            <h2 class="article__headline">Micro-frontends: a fundação que escalou a plataforma logística</h2>
+            <p class="article__byline">Grupo Boticário · Specialist Front-End Developer · Junho de 2022 — Junho de 2024</p>
+            <div class="article__body">
+              <p>Antes da governança, veio a fundação. A arquitetura de micro-frontends desenhada neste período se tornou o alicerce sobre o qual toda a operação logística global passou a escalar — com processos rigorosos de onboarding e descentralização de módulos.</p>
+              <ul>
+                <li>Desenvolvimento e implementação da fundação técnica e arquitetura de Micro-frontends para a plataforma logística global.</li>
+                <li>Estruturação de um modelo rigoroso de governança técnica, viabilizando a descentralização de novos módulos e a escala do time através de processos de onboarding.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Medprev -->
+          <article class="article" id="medprev">
+            <span class="article__label">Breve</span>
+            <h2 class="article__headline">Alinhamento estratégico acelera ferramenta de agendamento online</h2>
+            <p class="article__byline">Medprev · Tech Lead · Abril de 2022 — Maio de 2022</p>
+            <div class="article__body">
+              <p>Em um intervalo intenso de dois meses, a ponte entre Produto e Engenharia foi reforçada para sustentar e evoluir a ferramenta core de agendamento online — com mentoria diária da equipe de desenvolvimento.</p>
+              <ul>
+                <li>Alinhamento estratégico com a equipe de Produto para o entendimento e desdobramento técnico de requisitos de negócio complexos na ferramenta core de agendamento online.</li>
+                <li>Liderança focada na sustentação e evolução do produto, além da coordenação e mentoria diária da equipe de engenharia.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ACCT Global -->
+          <article class="article" id="acct">
+            <span class="article__label">Especial</span>
+            <h2 class="article__headline">Arquitetura VTEX para e-commerce de grande porte</h2>
+            <p class="article__byline">ACCT Global · Solutions Architect · Fevereiro de 2022 — Abril de 2022</p>
+            <div class="article__body">
+              <p>No segmento de e-commerce de grande porte, cada decisão arquitetural carrega peso. Diagramas UML e soluções robustas foram desenhados para atender múltiplos clientes na plataforma VTEX — traduzindo complexidade em especificação técnica clara.</p>
+              <ul>
+                <li>Desenho e arquitetura de soluções robustas para produtos digitais multiclientes no segmento de e-commerce de grande porte (plataforma VTEX), utilizando Diagramas UML para especificação técnica.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Hilab -->
+          <article class="article" id="hilab">
+            <span class="article__label">Investigação</span>
+            <h2 class="article__headline">De PoCs a laudos: time cresce 12 engenheiros em ferramentas críticas</h2>
+            <p class="article__byline">Hilab · Tech Lead · Janeiro de 2021 — Fevereiro de 2022</p>
+            <div class="article__body">
+              <p>Na intersecção entre saúde e tecnologia, protótipos rápidos e gestão de pessoas caminharam juntos. Doze novos engenheiros foram integrados para operar ferramentas críticas de emissão de laudos — enquanto PoCs validavam soluções diagnósticas em tempo recorde.</p>
+              <ul>
+                <li>Parceria ativa com Produto para refinamento de escopo, desenvolvimento de PoCs e prototipagem de soluções diagnósticas.</li>
+                <li>Gestão da expansão do time, liderando a atração e onboarding de 12 novos engenheiros para atuar em ferramentas críticas de emissão de laudos.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="competencias" aria-labelledby="sidebar-skills-title">
+          <div class="sidebar__block">
+            <h2 class="sidebar__title" id="sidebar-skills-title">Competências</h2>
+
+            <p class="sidebar__category">Gestão de Produto Técnico</p>
+            <ul class="sidebar__list">
+              <li>Viabilidade Técnica</li>
+              <li>Roadmap de Engenharia</li>
+              <li>Refinamento de Escopo</li>
+              <li>Prototipagem e PoCs</li>
+            </ul>
+
+            <p class="sidebar__category">Liderança &amp; Governança</p>
+            <ul class="sidebar__list">
+              <li>Liderança Cross-Squads</li>
+              <li>Gestão de Stakeholders</li>
+              <li>Mitigação de Riscos</li>
+              <li>Mentoria</li>
+              <li>Onboarding</li>
+            </ul>
+
+            <p class="sidebar__category">Arquitetura &amp; Engenharia</p>
+            <ul class="sidebar__list">
+              <li>Micro-frontends</li>
+              <li>Soluções de E-commerce (VTEX)</li>
+              <li>Diagramação UML</li>
+              <li>Escalabilidade de Plataformas</li>
+            </ul>
+
+            <p class="sidebar__category">Tecnologias</p>
+            <ul class="sidebar__list">
+              <li>React, Vue.js, Angular</li>
+              <li>Node.js, Nuxt</li>
+              <li>JavaScript, PHP</li>
+              <li>Banco de Dados SQL</li>
+            </ul>
+          </div>
+
+          <div class="sidebar__block">
+            <h2 class="sidebar__title">Formação Acadêmica</h2>
+            <p>Bacharelado em Engenharia de Software</p>
+            <p style="font-family: var(--font-meta); font-size: 0.8125rem; margin-top: 0.35rem; color: #555;">Unicesumar · Conclusão prevista para 2028</p>
+          </div>
+
+          <div class="sidebar__block">
+            <a href="https://linkedin.com/in/filipigustavo" class="sidebar__linkedin" rel="noopener noreferrer" target="_blank">Conectar no LinkedIn →</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Filipi Gustavo Boltão Silva</p>
+    <div class="footer__rule" aria-hidden="true"></div>
+    <p>
+      <a href="https://linkedin.com/in/filipigustavo" rel="noopener noreferrer" target="_blank">linkedin.com/in/filipigustavo</a>
+    </p>
+    <p style="margin-top: 0.5rem; color: #666;">© 2026 · Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    // Highlight active nav link on scroll
+    (function () {
+      var sections = document.querySelectorAll('section[id], article[id]');
+      var navLinks = document.querySelectorAll('.nav-bar__inner a');
+
+      if (!sections.length || !navLinks.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navLinks.forEach(function (link) {
+              var isActive = link.getAttribute('href') === '#' + id;
+              link.style.fontWeight = isActive ? '700' : '400';
+              link.style.background = isActive ? 'var(--paper-dark)' : '';
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+
+      sections.forEach(function (section) { observer.observe(section); });
+    })();
+  </script>
+
+</body>
+</html>
